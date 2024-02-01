@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 const router = Router();
 
 router.get("/", (req, res) => {
-  return res.send("Olá, DEV!");
+  return res.send("Funcionando!");
 });
 
 router.get("/api", (req, res) => {
