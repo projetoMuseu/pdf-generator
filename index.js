@@ -5,7 +5,14 @@ import {router} from './src/routes/index.js';
 
 const server = express();
 
-server.use(cors());
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+};
+
+server.use(cors(corsOptions));
 
 server.use(express.json({ limit: '50mb' }));
 server.use(express.urlencoded({ limit: '50mb', extended: true }));
