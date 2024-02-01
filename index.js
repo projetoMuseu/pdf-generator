@@ -5,9 +5,7 @@ import {router} from './src/routes/index.js';
 
 const server = express();
 
-server.use(cors({
-    origin: process.env.ENABLED_CORS?.split(';') || []
-}));
+server.use(cors());
 
 server.use(express.json({ limit: '50mb' }));
 server.use(express.urlencoded({ limit: '50mb', extended: true }));
