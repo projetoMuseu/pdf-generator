@@ -3,8 +3,12 @@ import puppeteer from "puppeteer";
 
 const router = Router();
 
-router.get("/api", (req, res) => {
+router.get("/", (req, res) => {
   return res.send("Olá, DEV!");
+});
+
+router.get("/api", (req, res) => {
+  return res.json({conteudo: "Vazio"});
 });
 
 router.post("/api/pdf", async (req, res) => {
