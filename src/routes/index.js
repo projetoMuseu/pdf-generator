@@ -3,11 +3,11 @@ import puppeteer from "puppeteer";
 
 const router = Router();
 
-router.get("/", (req, res) => {
+router.get("/api", (req, res) => {
   return res.send("Olá, DEV!");
 });
 
-router.post("/pdf", async (req, res) => {
+router.post("/api/pdf", async (req, res) => {
   const { htmlContent } = req.body;
   
   if (!htmlContent) {
